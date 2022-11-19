@@ -55,7 +55,7 @@ console.log(convertToTitle(500));*/
 //What happens if extra letter equals 27? Well I dont know how to do that so lets just do max of columnNumber 701
 
 
-const convertToTitle = function(columnNumber) 
+/*const convertToTitle = function(columnNumber) 
 {
     let extraLetter;
     let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -74,5 +74,39 @@ const convertToTitle = function(columnNumber)
     return final;
 };
 
-console.log(convertToTitle(702));
+console.log(convertToTitle(702)); */
 
+//Given an integer columnNumber, return its corresponding column title as it appears in an Excel sheet.
+
+//type out an array a to z
+//there are 26 letters in the alphabet
+//when 27 hits, add a letter A to the front.
+//if modulo columnNumber % 26 > 0, that means you gotta add frontal letters.
+
+//First we should start by dividing columnNumber by 26(rounded down to nearest integer). If this is zero, then column number = columnnumber.
+//If ^^ is 1 or higher, then you tag that number in the array and add it to the front of finalresult, then you take input %26 and you get your second number.
+
+const convertToTitle = function(columnNumber) 
+{
+    let extraLetter;
+    let letter;
+    let finalResult;
+    let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+    extraLetter = Math.floor(columnNumber / 26);
+    letter = alphabet[(columnNumber % 26) -1];
+    
+    
+    if (extraLetter > 0)
+    {
+        extraLetter = alphabet[extraLetter - 1];
+        
+    }
+
+    finalResult = extraLetter + letter;
+    return finalResult;
+
+}
+
+
+console.log(convertToTitle(600));
