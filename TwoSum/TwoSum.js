@@ -9,12 +9,12 @@ const twoSum = function(nums, target)
     {
         for (let j = 1; j < nums.length; j++)
         {
-            if (nums[i] + nums[j] == target)
+            if (nums[i] + nums[j] === target)
             {
                 return [i, j];
             }
         }
     }
-};
+}   
 
 console.log(twoSum(array, target));

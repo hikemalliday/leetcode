@@ -1,29 +1,24 @@
-/// unsolved
 
 
-let digits1 = [1,2,3];
-let digits2 = [1,4,1];
-let digits3 = [1,9,9];
-let digits4 = [9];
-var plusOne = function(digits) 
+//Given an array that represents an integer, return that integer + 1, but also represented as an array.
+
+
+
+array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+array2 = [9, 9, 9, 9, 9, 9, 9, 9, 9];
+array3 = [1, 2, 5];
+array4 = [2, 9, 9];
+array5 = [1, 8, 8];
+array6 = [9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9];
+
+
+
+const plusOne = function(array)
 {
-    for (let i = digits.length; i >= 0; i--)
-    {
-        if (digits[i] === 9)
-        {
-            digits[i] = 0;    
-        }
-        if (digits[i] !== 0)
-        {
-            digits[i] = digits[i] + 1;
-        }
-         if (digits[i] === 9 && i === 0)
-         {
-             
-             digits.unshift(1);
-        }
-    }
-    return digits;
-};
+   
+   return array;
+}
 
-console.log(plusOne(digits4));
+console.log(plusOne(array6));
+
+       

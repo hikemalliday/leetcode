@@ -6,39 +6,24 @@
 let word = 'hello'
 
 function reverseString(str)
-{
-    let result = [];
-    for (let i = str.length - 1; i >= 0; i--)
-    {
-        result.push(str[i])
-    }
-    return result.join('');
+{  
+   
 }
+
+
 
 //CHALLENGE 2: VALIDATE A PALINDROME
 //Return true is palindrome and false if not
 // ex. isPalindrome('racecar') === 'true', isPalindrome('hello') == false
+let string = 'racecar'
 
 function isPalindrome(str)
 {
-    let compare = '';
-    for (let i = str.length - 1; i >= 0; i--)
-    {
-        compare = str[i] + compare;
-    }
-    
-    
-    console.log(compare, str)
-    if (compare == str)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-    
+   
 }
+console.log(isPalindrome(string));
+
+
 
 
 // CHALLENGE 3: REVERSE AN INTEGER
@@ -46,15 +31,16 @@ function isPalindrome(str)
 // ex. reverseInt(521) === 125
 
 
-intger = 123456789
+integer = 123456789
 
 function reverseInt(int) 
 {
-    int.reverse();
-    return int;
+   
 }
 
-console.log(reverseInt(intger));
+
+
+
 
 
 
