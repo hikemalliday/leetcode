@@ -15,8 +15,22 @@ array6 = [9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9];
 
 const plusOne = function(array)
 {
+   for (let i = array.length - 1; i >= 0; i--)
+   {
+      if (array[i] === 9)
+      {
+         array[i] = 0
+      }
+      else 
+      {
+         array[i]++
+         return array
+      }
+   }
+    
+   array.unshift(1);
    
-   return array;
+   return array
 }
 
 console.log(plusOne(array6));

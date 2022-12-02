@@ -9,13 +9,27 @@ An input string is valid if:
 
 
 var isValid = function(s) 
-{ 
-    let compareArray = [];
-    for (let i = 0; i < s.length; i++)
-    {
-        if (s[i] === '(' || s[i] === '{' || s[i] === '[')
+{
+    let stack = [];
+    let hashMap = 
+     {
+        '(':')', '[':']', '{':'}'
+     }
+
+     for (let ch of s)
+     {
+        if (hashMap[ch])
         {
-            compareArray.push(s[i])
+            stack.push(hashMap[ch])
+        }
+        else if (stack.length > 0 && stack[stack.length - 1] === ch)
+        {
+            stack.pop()
+        }
+        else
+        {
+            return false;
         }
     }
-};
+    return stack.length === 0;
+}   

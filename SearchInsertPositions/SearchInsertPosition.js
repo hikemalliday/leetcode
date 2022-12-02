@@ -6,8 +6,22 @@
 nums = [1, 3, 5, 6];
 
 var searchInsert = function(nums, target) 
-{ 
-   
-    
-}
-console.log(searchInsert(nums, 2000));
+{ //Start out with a for loop:
+   for (let i = 0; i < nums.length; i++)
+   {
+        if (nums[i] === target)
+        {
+            return i;
+        }
+        if (nums[i] > target)
+        {
+            return i;
+        }
+        if (target > nums[nums.length - 1])
+        {
+            return nums.length;
+        }
+   }
+
+};
+console.log(searchInsert(nums, 8));
